@@ -7,7 +7,7 @@ const app = express()
 
 app.use(express.json())
 
-app.get("/redis", async (res, req) => {
+app.get("/redis", async (req, res) => {
     const reply = await redis.ping();
     res.json({redis:reply});
 })
