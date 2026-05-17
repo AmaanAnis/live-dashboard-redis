@@ -4,6 +4,9 @@ services:
     container_name: redis
     ports:
       - "6397:6397"
-    command: ["redis-server", "--apendonly", "yes"]
+    command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis-data:/data
+
+volumes:
+  redis-data:
